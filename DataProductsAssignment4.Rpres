@@ -1,0 +1,53 @@
+DataProductsAssignment4
+========================================================
+author: Vincent Kowalski
+date: February 19 , 2017
+autosize: true
+
+Data Product - Histogram of Random Distribution
+========================================================
+
+This application uses the following R features:
+
+- shiny web application architecture
+- rnorm function
+- histogram plotting
+
+Operation of Application
+========================================================
+
+This application is used by the end-user as follows:
+
+This application has a slider bar that is the input. The user simply slides the slider and this is used as the number of samples in the distribution. The server then uses this as input to a normal distribution calculation and displays the corresponding histogram.
+
+The app documentation may be obtained from GitHub at: 
+
+https://github.com/vjkowalski/DataProductsAssignment4/README.md
+
+
+UI & Server Code
+========================================================
+
+The User Interface code has a slider as input. This code
+may be found on GitHub at:
+
+https://github.com/vjkowalski/DataProductsAssignment4/ui.R
+
+The server part of the application does the random distribution
+and creates the histogram for output. It may be found on
+GitHub at:
+
+https://github.com/vjkowalski/DataProductsAssignment4/server.R
+
+
+Random Distribution Histogram Sample
+========================================================
+
+An example of doing a random distribution histogram is as 
+follows:
+
+```{r, echo=TRUE}
+set.seed(1);
+norm <- rnorm(100, 1, 10);
+plot(norm, type = 'h');
+```
